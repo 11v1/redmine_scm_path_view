@@ -1,4 +1,4 @@
-Redmine::Plugin.register :scm_path_view do
+Redmine::Plugin.register :redmine_scm_path_view do
   name 'Scm Path View plugin'
   author 'Grigoriy Vasilchenko'
   description 'This is a plugin for Redmine. It modifies "Repository" page and adds repository path (url in common)'
