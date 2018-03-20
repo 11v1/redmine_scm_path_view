@@ -10,7 +10,7 @@ Plugin was tested with Redmine 3.4.4.
 
 Copy the plugin directory into the plugins directory. Please note that plugin's folder name should be "redmine_scm_path_view". 
 
-### Uninstall
+### Plugin uninstall
 
 Remove "redmine_scm_path_view" folder
 

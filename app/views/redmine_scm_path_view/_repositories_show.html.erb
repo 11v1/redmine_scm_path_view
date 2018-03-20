@@ -1,5 +1,16 @@
 
 
-<p>
-	<%= repository.url %> -	<%= repository.scm_name %> 	
-</p>
+<table class="scm">
+	<tr>
+		<th>SCM:</th>
+		<td><%= repository.scm_name %></td>		
+	</tr>
+	<tr>
+		<th>Path:</th>
+		<td><%= repository.url %></td>
+	</tr>
+</table>
+
+<% content_for :header_tags do %>
+	<%= stylesheet_link_tag 'repository', :plugin => 'redmine_scm_path_view' %>
+<% end %>
