@@ -7,10 +7,22 @@
 	</tr>
 	<tr>
 		<th>Path:</th>
-		<td><%= repository.url %></td>
-	</tr>
+		<td id="scm_url"><%= repository.url %></td>
+		<td>
+			<button class="clipboard-btn" data-clipboard-action="copy" data-clipboard-target="#scm_url">
+				Copy to clipboard
+			</button>
+		</td>
+	</tr>	
 </table>
 
 <% content_for :header_tags do %>
 	<%= stylesheet_link_tag 'repository', :plugin => 'redmine_scm_path_view' %>
+	<%= javascript_include_tag "clipboard.min.js", :plugin => 'redmine_scm_path_view' %>	
 <% end %>
+
+<script>
+	$(document).ready(function(){    
+	  var clipboard = new ClipboardJS('.clipboard-btn');	  
+	});
+</script>
